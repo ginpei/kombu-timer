@@ -1,0 +1,41 @@
+.TimerPage {
+  display: grid;
+  grid-template:
+    "header" 3rem
+    "list" auto
+    "footer" 3rem
+    / auto;
+  height: 100vh;
+}
+
+.TimerPage-header {
+  grid-area: header;
+}
+
+.TimerPage-participantList {
+  display: flex;
+  grid-area: list;
+  flex-direction: column;
+
+  & > * {
+    flex-grow: 1;
+  }
+}
+
+.TimerPage-participantButton {
+  align-items: center;
+  background-color: white;
+  border: solid 1px lightgray;
+  box-shadow: 0 0 1rem #0003 inset;
+  display: flex;
+  font-size: 30px;
+  padding: 1rem;
+
+  &[data-active=true] {
+    color: tomato;
+  }
+}
+
+.TimerPage-footer {
+  grid-area: footer;
+}
