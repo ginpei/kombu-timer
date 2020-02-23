@@ -30,10 +30,29 @@
   display: flex;
   font-size: 30px;
   padding: 1rem;
+  position: relative;
 
   &[data-active=true] {
     color: tomato;
+
+    &::after {
+      animation: 1s ease-out infinite TimerPage-participantButton-heartBeating;
+      background-color: tomato;
+      border-radius: 50%;
+      content: "";
+      display: block;
+      height: 1rem;
+      left: 1rem;
+      position: absolute;
+      top: 1rem;
+      width: 1rem;
+    }
   }
+}
+
+@keyframes TimerPage-participantButton-heartBeating {
+  0% { transform: scale(1.5); }
+  80% { transform: scale(1); }
 }
 
 .TimerPage-footer {

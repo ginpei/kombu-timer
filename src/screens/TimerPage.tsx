@@ -107,7 +107,7 @@ const TimerPage: React.FC = () => {
 
     const tm = window.setInterval(
       () => setActiveElapse(timingMan.lastElapse),
-      300,
+      16,
     );
 
     return () => window.clearInterval(tm);
